@@ -13,7 +13,7 @@ const MyOrder = ({ orderData }) => {
     const handleOrder = id => {
         const proceed = window.confirm('Are you sure you want DELETE');
         if (proceed) {
-            fetch(`http://localhost:5000/order/${id}`, {
+            fetch(`https://pure-falls-66123.herokuapp.com/order/${id}`, {
                 method: 'DELETE',
                 haeders: { 'content-type': 'application/json' }
             })

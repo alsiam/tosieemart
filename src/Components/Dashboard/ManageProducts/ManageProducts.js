@@ -14,7 +14,7 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/drones')
+        fetch('https://pure-falls-66123.herokuapp.com/drones')
             .then(response => response.json())
             .then(data => setProducts(data))
     }, [])

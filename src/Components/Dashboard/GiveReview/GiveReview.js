@@ -22,7 +22,7 @@ const GiveReview = () => {
 
     // handle review function
     const handleReview = () => {
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://pure-falls-66123.herokuapp.com/reviews', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(review)
@@ -86,7 +86,7 @@ const GiveReview = () => {
                 </Box>
                 <Button
                     onClick={handleReview}
-                    sx={{ width: '95%', my: 2, bgcolor: 'text.primary' }}
+                    sx={{ width: '95%', my: 2, bgcolor: 'secondary.main' }}
                     type="submit"
                     size="large"
                     variant="contained">

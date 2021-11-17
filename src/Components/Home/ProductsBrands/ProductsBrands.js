@@ -25,7 +25,6 @@ const ProductsBrands = () => {
                 <SwiperSlide><img src="https://i.ibb.co/gtmR27d/3d.webp" alt="" /> </SwiperSlide>
                 <SwiperSlide><img src="https://i.ibb.co/L0WBD2v/dji.webp" alt="" /> </SwiperSlide>
                 <SwiperSlide><img src="https://i.ibb.co/wL25cQ0/fly.webp" alt="" /> </SwiperSlide>
-                <SwiperSlide><img src="https://i.ibb.co/8BCRD42/one.webp" alt="" /> </SwiperSlide>
                 <SwiperSlide><img src="https://i.ibb.co/FzdRC98/photographer.webp" alt="" /> </SwiperSlide>
                 <SwiperSlide><img src="https://i.ibb.co/r5RRZQt/sky.webp" alt="" /> </SwiperSlide>
             </Swiper>

@@ -1,13 +1,12 @@
-import React from 'react';
 import { Grid } from '@mui/material';
+import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import './Product.css';
-import { useHistory } from 'react-router';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import './Product.css';
 
 const Product = ({ products }) => {
     const { img, name, price, description, _id } = products;
@@ -40,7 +39,7 @@ const Product = ({ products }) => {
                         Price: {price}$
                     </Typography>
 
-                    <Link to={`/product/${_id}`}> <Button sx={{ bgcolor: 'text.primary' }} size="small" variant="contained">Buy Now</Button> </Link>
+                    <Link to={`/product/${_id}`}> <Button sx={{ bgcolor: 'secondary.main' }} size="small" variant="contained">Buy Now</Button> </Link>
                 </CardContent>
             </Card>
         </Grid >

@@ -7,7 +7,9 @@
     width: 90%;
     animation: imgAnimation infinite 4s alternate-reverse;
 }
-
+.img-banner{
+    width: 60%;
+}
 @keyframes imgAnimation {
     /* 0%{
         transform:scale(1);

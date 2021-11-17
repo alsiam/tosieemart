@@ -88,7 +88,7 @@ const useFirebase = () => {
     // save user 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName }
-        fetch('http://localhost:5000/users', {
+        fetch('https://pure-falls-66123.herokuapp.com/users', {
             method: method,
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)
@@ -97,7 +97,7 @@ const useFirebase = () => {
 
     // user admin data loading 
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://pure-falls-66123.herokuapp.com/user/${user.email}`)
             .then(response => response.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])

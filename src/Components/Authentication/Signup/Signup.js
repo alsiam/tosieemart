@@ -1,12 +1,11 @@
-import { Container, Typography, TextField, Button, Alert } from '@mui/material';
+import GoogleIcon from '@mui/icons-material/Google';
+import { Alert, Button, Container, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
-import logo from '../../../image/logo-2.png';
-import useAuth from '../../../Hooks/useAuth';
-import { NavLink } from 'react-router-dom';
 import { useHistory, useLocation } from 'react-router';
-import GoogleIcon from '@mui/icons-material/Google';
+import { NavLink } from 'react-router-dom';
 import swal from 'sweetalert';
+import useAuth from '../../../Hooks/useAuth';
 
 const Signup = () => {
 
@@ -49,16 +48,15 @@ const Signup = () => {
 
     return (
         <Container sx={{ my: 5 }}>
-            <img src={logo} alt="" />
             <Box sx={{
                 width: {
                     xs: '100%',
                     sm: '100%',
                     md: '100%',
                     lg: '50%',
-                }, margin: 'auto', border: 2, py: 4
+                }, margin: 'auto',  py: 4
             }}>
-                <Typography variant="h6" className="title-2" style={{ fontWeight: 'bold' }}>REGISTER</Typography>
+                <Typography variant="h2" className="" style={{ fontWeight: 'bold' }}>REGISTER</Typography>
 
                 {/* form here  */}
                 <Box sx={{ py: 4 }}>
@@ -104,7 +102,7 @@ const Signup = () => {
 
                     <Button
                         onClick={handleSignUp}
-                        sx={{ width: '80%', my: 1, bgcolor: 'text.primary' }}
+                        sx={{ width: '80%', my: 1, bgcolor: 'secondary.main' }}
                         type="submit"
                         size="large"
                         variant="contained">
@@ -119,7 +117,7 @@ const Signup = () => {
 
                     <Button
                         onClick={() => handleGoogleSignIn(history, location)}
-                        sx={{ my: 1, bgcolor: 'text.primary' }}
+                        sx={{ my: 1, bgcolor: 'secondary.main' }}
                         variant="contained">
                         <GoogleIcon /> <Box sx={{ px: 2 }}> Google signin</Box>
                     </Button>

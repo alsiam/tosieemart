@@ -13,7 +13,7 @@ const ManageProduct = ({ products }) => {
         const procced = window.confirm('Are you sure you want DELETE ?')
 
         if (procced) {
-            fetch(`http://localhost:5000/drone/${id}`, {
+            fetch(`https://pure-falls-66123.herokuapp.com/drone/${id}`, {
                 method: 'DELETE',
                 header: { 'content-type': 'application/json' }
             })
@@ -40,7 +40,7 @@ const ManageProduct = ({ products }) => {
                 <TableCell align="left">{name}</TableCell>
                 <TableCell align="left">{price}</TableCell>
                 <TableCell align="left">{addby}</TableCell>
-                <TableCell align="left"> <Button sx={{ color: 'error.main', bgcolor: 'text.primary' }} onClick={() => handleProduct(_id)}><DeleteIcon /> </Button> </TableCell>
+                <TableCell align="left"> <Button sx={{ color: 'error.main', bgcolor: 'secondary.main' }} onClick={() => handleProduct(_id)}><DeleteIcon /> </Button> </TableCell>
             </TableRow >
         </>
     );

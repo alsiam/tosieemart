@@ -1,17 +1,16 @@
-import React from 'react';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import { Avatar, Button } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import logo from '../../../image/logo.png';
+import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-import { Avatar, Button } from '@mui/material';
+import logo from '../../../image/logo.png';
 import './Navigation.css';
 
 const navStyle = {
@@ -43,7 +42,7 @@ const Navigation = () => {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar sx={{ bgcolor: 'text.primary' }} position="static">
+            <AppBar sx={{ bgcolor: 'secondary.main', borderRadius: '16' }} position="static">
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     {/* <IconButton
                         size="large"
@@ -54,10 +53,10 @@ const Navigation = () => {
                     >
                         <MenuIcon />
                     </IconButton> */}
-                    <NavLink to="/"><img className="logo-img" src={logo} alt="" /></NavLink>
+                    <NavLink to="/"><img className="logo-img" style={{ width: '50%' }} src={logo} alt="" /></NavLink>
                     <Box sx={navStyle}>
                         <NavLink to="/"><Typography variant="button " style={{ textDecoration: 'none', color: '#fff' }} sx={{ flexGrow: 1, px: 2 }}>Home</Typography></NavLink>
-                        <NavLink to="/explore-products"><Typography variant="button " style={{ textDecoration: 'none', color: '#fff' }} sx={{ flexGrow: 1, px: 2 }}>Explore Products</Typography></NavLink>
+                        <NavLink to="/explore-products"><Typography variant="button " style={{ textDecoration: 'none', color: '#fff' }} sx={{ flexGrow: 1, px: 2 }}>Products</Typography></NavLink>
                     </Box>
                     <div>
                         {user.email ? <Box>

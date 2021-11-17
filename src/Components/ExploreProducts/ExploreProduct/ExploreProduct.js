@@ -38,7 +38,7 @@ const ExploreProduct = ({ products }) => {
                         Price: {price}$
                     </Typography>
 
-                    <Button onClick={() => handleBuy(_id)} sx={{ bgcolor: 'text.primary' }} size="small" variant="contained">Buy Now</Button>
+                    <Button onClick={() => handleBuy(_id)} sx={{ bgcolor: 'secondary.main' }} size="small" variant="contained">Buy Now</Button>
                 </CardContent>
             </Card>
         </Grid>

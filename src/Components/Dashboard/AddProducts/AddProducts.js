@@ -23,7 +23,7 @@ const AddProducts = () => {
             ...product,
             addby: user.displayName
         }
-        fetch('http://localhost:5000/drones', {
+        fetch('https://pure-falls-66123.herokuapp.com/drones', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(productInfo)
@@ -86,7 +86,7 @@ const AddProducts = () => {
                 />
                 <Button
                     onClick={handleAdding}
-                    sx={{ width: '95%', my: 2, bgcolor: 'text.primary' }}
+                    sx={{ width: '95%', my: 2, bgcolor: 'secondary.main' }}
                     type="submit"
                     size="large"
                     variant="contained">

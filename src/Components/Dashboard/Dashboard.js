@@ -127,7 +127,7 @@ const Dashboard = () => {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar position="fixed" open={open} sx={{ bgcolor: 'text.primary' }}>
+            <AppBar position="fixed" open={open} sx={{ bgcolor: 'secondary.main' }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"

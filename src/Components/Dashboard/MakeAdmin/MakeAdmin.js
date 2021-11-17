@@ -15,7 +15,7 @@ const MakeAdmin = () => {
 
     const handleMaking = () => {
         const user = { email }
-        fetch('http://localhost:5000/user/admin', {
+        fetch('https://pure-falls-66123.herokuapp.com/user/admin', {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)
@@ -56,7 +56,7 @@ const MakeAdmin = () => {
 
             <Button
                 onClick={handleMaking}
-                sx={{ width: '95%', my: 2, bgcolor: 'text.primary' }}
+                sx={{ width: '95%', my: 2, bgcolor: 'secondary.main' }}
                 type="submit"
                 size="large"
                 variant="contained">

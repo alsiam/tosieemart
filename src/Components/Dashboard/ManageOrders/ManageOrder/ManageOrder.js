@@ -14,7 +14,7 @@ const ManageOrder = ({ orders }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want DELETE');
         if (proceed) {
-            fetch(`http://localhost:5000/order/${id}`, {
+            fetch(`https://pure-falls-66123.herokuapp.com/order/${id}`, {
                 method: 'DELETE',
                 haeders: { 'content-type': 'application/json' }
             })
@@ -36,7 +36,7 @@ const ManageOrder = ({ orders }) => {
 
     // handle status here 
     const handleStatus = id => {
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://pure-falls-66123.herokuapp.com/order/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' }
         })
@@ -64,8 +64,8 @@ const ManageOrder = ({ orders }) => {
                 <TableCell align="left">{number}</TableCell>
                 <TableCell align="left">{status}</TableCell>
                 <TableCell align="left">{date}</TableCell>
-                <TableCell align="center"> <Button onClick={() => handleDelete(_id)} sx={{ color: 'error.main', bgcolor: 'text.primary', mx: 1 }} ><DeleteIcon /> </Button>
-                    {status === 'shipped' ? '' : <Button onClick={() => handleStatus(_id)} sx={{ color: 'error.main', bgcolor: 'text.primary' }} ><BookmarkAddIcon /> </Button>}
+                <TableCell align="center"> <Button onClick={() => handleDelete(_id)} sx={{ color: 'error.main', bgcolor: 'secondary.main', mx: 1 }} ><DeleteIcon /> </Button>
+                    {status === 'shipped' ? '' : <Button onClick={() => handleStatus(_id)} sx={{ color: 'error.main', bgcolor: 'secondary.main' }} ><BookmarkAddIcon /> </Button>}
                 </TableCell>
             </TableRow >
         </>

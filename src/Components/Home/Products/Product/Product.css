@@ -1,9 +1,6 @@
 .product-card{
-    border: 7px solid #f0eeee;
-    transition: all 0.3s;
-}
-.product-card:hover{
-    border: 7px solid #212121;
+    box-shadow: 1px 1px 5px purple !important;
+    margin: 10px;
 }
 .title:after{
     content: '';

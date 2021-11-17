@@ -27,7 +27,7 @@ const BuyProduct = () => {
 
     // getting the match product using id here 
     useEffect(() => {
-        fetch(`http://localhost:5000/drones/${id}`)
+        fetch(`https://pure-falls-66123.herokuapp.com/drones/${id}`)
             .then(response => response.json())
             .then(data => setProduct(data))
     }, [id]);
@@ -44,7 +44,7 @@ const BuyProduct = () => {
             date: new Date().toLocaleDateString()
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://pure-falls-66123.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -110,7 +110,7 @@ const BuyProduct = () => {
                         />
                         <Button
                             onClick={handleBooking}
-                            sx={{ width: '80%', my: 1, bgcolor: 'text.primary' }}
+                            sx={{ width: '80%', my: 1, bgcolor: 'secondary.main' }}
                             type="submit"
                             size="large"
                             variant="contained">
