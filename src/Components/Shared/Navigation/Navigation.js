@@ -10,9 +10,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-import logo from '../../../image/logo.png';
 import './Navigation.css';
-
 const navStyle = {
     color: '#fff',
     textDecoration: 'none'
@@ -53,7 +51,7 @@ const Navigation = () => {
                     >
                         <MenuIcon />
                     </IconButton> */}
-                    <NavLink to="/"><img className="logo-img" style={{ width: '50%' }} src={logo} alt="" /></NavLink>
+                    <NavLink to="/">Tosiee</NavLink>
                     <Box sx={navStyle}>
                         <NavLink to="/"><Typography variant="button " style={{ textDecoration: 'none', color: '#fff' }} sx={{ flexGrow: 1, px: 2 }}>Home</Typography></NavLink>
                         <NavLink to="/explore-products"><Typography variant="button " style={{ textDecoration: 'none', color: '#fff' }} sx={{ flexGrow: 1, px: 2 }}>Products</Typography></NavLink>
