@@ -1,6 +1,6 @@
-# Watch Lover
+# Tosiee
 
- Watch Lover application using react js, metarial ui,node, mongodb and express
+ Tosiee application using react js, metarial ui,node, mongodb and express
 
 ## Features
 - we make admin dashboard to contorl the website 
@@ -16,4 +16,4 @@
 - we use sweet alert so that the website looks good.
 
 ## 🔗 The Links
-(https://watch-lover.netlify.app)
+(https://tosiee.vercel.app)
