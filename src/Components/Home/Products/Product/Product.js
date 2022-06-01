@@ -19,8 +19,8 @@ const Product = ({ products }) => {
     // }
 
     return (
-        <Grid item xs={12} sm={6} md={4}>
-            <Card className="product-card" sx={{ maxWidth: 365, p: 2, boxShadow: 0 }}>
+        <Grid item xs={12} sm={6} md={2}>
+            <Card className="product-card" sx={{ maxWidth: 365, boxShadow: 0 }}>
                 <CardMedia
                     component="img"
                     height="180"
@@ -28,18 +28,17 @@ const Product = ({ products }) => {
                     alt="drone image"
                 />
                 <CardContent sx={{ textAlign: 'start' }}>
-                    <Typography gutterBottom variant="h6" component="div">
-                        {name}
+                    <Typography gutterBottom variant="h6" component="div" style={{fontSize:15, fontWeight: 500}} >
+                    {name.length >= 40 ? (name.substring(0,38)):(name)}...
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {description}
-                        {/* description.length > 50 ? description.split(' ').slice(0, 20).join(' ') : */}
+                    <Typography variant="subtitle2" color="text.secondary">
+                        {description.length >= 50 ? (description.substring(0,45)):(description)}
                     </Typography>
                     <Typography sx={{ py: 1 }} variant="subtitle1" >
                         Price: {price}$
                     </Typography>
 
-                    <Link to={`/product/${_id}`}> <Button sx={{ bgcolor: 'secondary.main' }} size="small" variant="contained">Buy Now</Button> </Link>
+                    <Link to={`/product/${_id}`}> <Button size="small" variant="outlined">Buy Now</Button> </Link>
                 </CardContent>
             </Card>
         </Grid >

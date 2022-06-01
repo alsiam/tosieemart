@@ -1,5 +1,5 @@
 .product-card{
-    box-shadow: 1px 1px 5px purple !important;
+    box-shadow: 1px 1px 5px rgb(75, 69, 75) !important;
     margin: 10px;
 }
 .title:after{

@@ -5,6 +5,7 @@ import Banner from './Banner/Banner';
 import ProductsBrands from './ProductsBrands/ProductsBrands';
 import Reviews from './Reviews/Reviews';
 import Products from './Products/Products';
+import { Skeleton } from '@mui/material';
 
 const Home = () => {
 
@@ -12,9 +13,9 @@ const Home = () => {
         <div>
             <Navigation />
             <Banner />
-            <ProductsBrands />
             <Products />
             <Reviews />
+            <ProductsBrands />
             <Footer />
         </div>
     );

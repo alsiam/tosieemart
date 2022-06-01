@@ -12,6 +12,7 @@ import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Button from '@mui/material/Button';
 import { alpha, styled } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -22,6 +23,7 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import "./Navigation.css";
+import { color } from "@mui/system";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -99,6 +101,7 @@ export default function PrimarySearchAppBar() {
 
   const menuId = "primary-search-account-menu";
   const renderMenu = (
+    
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{
@@ -114,8 +117,16 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}><LogoutIcon/> <Link to="/login">Login</Link></MenuItem>
-      <MenuItem onClick={handleMenuClose}><LoginIcon/> <Link to="/signup">Register</Link></MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <Link to="/login">
+          <Button sx={{ bgcolor: 'secondary.main' }} size="small" variant="contained"><LogoutIcon /> Login</Button>
+        </Link>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <Link to="/signup">
+          <Button sx={{ bgcolor: 'secondary.main' }} size="small" variant="contained"><LogoutIcon /> Register</Button>
+        </Link>
+      </MenuItem>
     </Menu>
   );
 
@@ -175,22 +186,14 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography
-            variant="h6"
+            fontSize="2rem"
+            color="primary"
             noWrap
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            <Link to="/">Tosiee</Link>
+            <Link to="/" style={{ textDecoration: 'none', color:'#fff' }}>Tosiee</Link>
           </Typography>
           <Search>
             <SearchIconWrapper>
